@@ -17,7 +17,8 @@ class App extends Component{
     const updatedData = userDetails.map(user => ({
       FullName: `${user.name.title} ${user.name.first} ${user.name.last}`,
       Email : user.email,
-      Address : `${user.location.street.name},${user.location.city},${user.location.state},${user.location.country},${user.location.postcode}`
+      Address : `${user.location.street.name},${user.location.city},
+      ${user.location.state},${user.location.country},${user.location.postcode}`
     }))
     this.setState({userDataList:updatedData})
   }
