@@ -38,8 +38,9 @@
   flex-direction: column;
   align-items: center;
   margin-top:60px;
-  margin-bottom: 70px;
+  padding-bottom: 50px;
   width: 100%;
+  height: auto;
 }
 @media screen and (max-width:768px) {
   .app-body-section{
@@ -66,12 +67,16 @@
   margin-left: 20px;
   margin-right: 20px;
 }
+@media screen and (max-width:768px) {
+  .vertical-line{
+    height: 120px;
+  }
+}
 .photo-container{
-  padding: 40px;
   background-color: #4b4bdf;
-  height:50px;
   border-radius:5px;
 }
+
 .photo-text{
   color:#ffff
 }

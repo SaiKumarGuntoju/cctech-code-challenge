@@ -17,6 +17,7 @@ class App extends Component{
     const updatedData = userDetails.map(user => ({
       FullName: `${user.name.title} ${user.name.first} ${user.name.last}`,
       Email : user.email,
+      picture:user.picture.large,
       Address : `${user.location.street.name},${user.location.city},
       ${user.location.state},${user.location.country},${user.location.postcode}`
     }))
@@ -36,7 +37,7 @@ class App extends Component{
               {userDataList.map(eachUser => {
                 return(
                   <div className="user-details-container">
-                    <div className="photo-container"><p className="photo-text">Photo</p> </div>
+                    <div className="photo-container"><img src={eachUser.picture} alt={eachUser.FullName} /></div>
                     <div className="vertical-line"></div>
                     <div className="user-bio-container">
                       <p>{eachUser.FullName}</p>
